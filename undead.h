@@ -43,7 +43,7 @@ public:
 class UndeadAdapter : public Character {
     shared_ptr<Undead> undead;
 public:
-    UndeadAdapter(shared_ptr<Undead> u){ 
+    UndeadAdapter(shared_ptr<Undead> u) : undead(u){ 
         description = undead->name();
         if(description == "Zombie") type = CharacterType::Zombie;
         else if(description == "Skeleton") type = CharacterType::Skeleton;
